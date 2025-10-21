@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ACollahuazoS2.Views.vInicio"
+             Title="vInicio">
+    <VerticalStackLayout Padding="20"
+                         Spacing="20">
+        
+        <Label 
+            Text="Semana 2: Elementos GUI"
+            VerticalOptions="Center"
+            FontSize="20"
+            TextColor="Blue"
+            HorizontalOptions="Center" />
+
+        <Grid>
+            <!--filas-->
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <!--Columnas-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Nombre"
+                   FontSize="18"
+                   Grid.Row="0"
+                   Grid.Column="0"/>
+
+            <Entry x:Name="txtNombre"
+                   Placeholder="Ingresa tu nombre"
+                   Grid.Row="0"
+                   Grid.Column="1"/>
+
+            <Label Text="Paises"
+                   FontSize="16"
+                   Grid.Row="1"
+                   Grid.Column="0"/>
+            
+            <!--Combobox-->            
+            <Picker x:Name="pkPaises"
+                    Grid.Row="1"
+                    Grid.Column="1">
+                
+                <Picker.Items >
+                    <x:String>Ecuador</x:String>
+                    <x:String>Peru</x:String>
+                    <x:String>Chile</x:String>
+                </Picker.Items>
+                
+            </Picker>
+            
+            <!--Calendario-->
+            <Label Text="Fecha"
+                   FontSize="16"
+                   Grid.Row="2"
+                   Grid.Column="0"/>
+
+            <DatePicker x:Name="dpFecha" Format="mm/dd/yyyy"
+                        Grid.Row="2"
+                        Grid.Column="1"/>
+
+        </Grid>
+
+        <Button x:Name="btnMostrar"
+                Text="Mostrar"
+                Clicked="btnMostrar_Clicked"/>
+
+        <Label x:Name="lblNombre"
+               FontSize="16"
+               TextColor="Red"/>
+
+        <Label x:Name="lblPais"
+                FontSize="16"
+               TextColor="Red"/>
+
+        <Label x:Name="lblFecha"
+               FontSize="16"
+               TextColor="Red"/>
+
+
+    </VerticalStackLayout>
+</ContentPage>
