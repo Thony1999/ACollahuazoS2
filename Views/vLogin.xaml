@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ACollahuazoS2.Views.vLogin"
+             Title="vLogin">
+    
+    <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="Center">
+        <Label 
+            Text="Inicio de Sesión"
+            FontSize="22"
+            TextColor="Blue"
+            HorizontalOptions="Center" />
+
+        <Entry x:Name="txtUsuario"
+               Placeholder="Usuario"
+               FontSize="18"/>
+
+        <Entry x:Name="txtPassword"
+               Placeholder="Contraseña"
+               IsPassword="True"
+               FontSize="18"/>
+
+        <Button Text="Ingresar"
+                Clicked="Button_Clicked"/>
+
+        <Label x:Name="lblMensaje"
+               FontSize="16"
+               TextColor="Red"
+               HorizontalOptions="Center"/>
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -2,7 +2,17 @@ namespace ACollahuazoS2.Views;
 
 public partial class vInicio : ContentPage
 {
-	public vInicio()
+    string usuarioConectado;
+
+    public vInicio(string usuario)
+    {
+        InitializeComponent();
+        usuarioConectado = usuario;
+
+        DisplayAlert("Bienvenido", $"Usuario conectado: {usuarioConectado}", "Aceptar");
+    }
+
+    public vInicio()
 	{
 		InitializeComponent();
 	}
